@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Rangana Bandara portfolio</title>
+  <title>Index - iPortfolio Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -13,300 +12,551 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
 
-<body>
+<body class="index-page">
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
 
-      <div class="profile">
-        <img src="assets/img/hero-bg.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Rangana Bandara</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/RanganaBandara" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.facebook.com/deneth.rangana.3" class="facebook"><i class="bx bxl-facebook"></i></a>          
-          <a href="https://lk.linkedin.com/in/rangana-bandara-a53787164" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Rangana Bandara</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.facebook.com/deneth.rangana.3" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://github.com/RanganaBandara" class="github"><i class="bi bi-github"></i></a>
+      <a href="https://lk.linkedin.com/in/rangana-bandara-a53787164" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        
+      
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Rangana Bandara</h2>
+        <p>I'm a <span class="typed" data-typed-items="Designer, Developer, Freelancer,Software Engineer">Web developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
+    </section><!-- /Hero Section -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Rangana Bandara</h1>
-      <p>I'm <span class="typed" data-typed-items=" Fullstack web developer,Software Engineer"></span></p>
-    </div>
-  </section><!-- End Hero -->
+    <!-- About Section -->
+    <section id="about" class="about section">
 
-  <main id="main">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Hi there! I'm Rangana Bandara, a passionate software engineering intern eager to learn and contribute to a team environment. I'm particularly interested in fullstack web development and have experience with programming languages like c#.Java,Typescript,JavaScript and python.  I'm always looking for new challenges and opportunities to expand my skillset.</p>
+      </div><!-- End Section Title -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Hi there! I'm Rangana Bandara, a passionate software engineering intern eager to learn and contribute to a team environment. I'm particularly interested in fullstack web development and have experience with programming languages like c#.Java,Typescript,JavaScript and python.  I'm always looking for new challenges and opportunities to expand my skillset.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="data:image/jpeg;base64,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" class="img-fluid" alt="">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Fullstack Web Developer</h3>
+          <div class="col-lg-8 content">
+            <h2> Web Developer</h2>
            
             <div class="row">
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>30 January 2001</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+9477168503</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+94702604932</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Rajagiriya</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bict</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>ranganadeneth6@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>ranganadeneth6@gmail.com</span></li>
                 </ul>
               </div>
             </div>
-           
+            <p class="py-3">
+              I am a final-year undergraduate who has completed my exams and is currently awaiting the opportunity to begin my research. During my studies, I have gained hands-on experience in various technologies and am eager to apply my knowledge to real-world projects.   </p>
           </div>
         </div>
 
       </div>
-    </section><!-- End About Section -->
 
-   
-     
-    </section><!-- End Facts Section -->
+    </section><!-- /About Section -->
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
+    
 
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
 
-        <div class="row skills-content">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
 
-          <div class="col-lg-6" data-aos="fade-up">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="progress">
-              <span class="skill">c# <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
 
             <div class="progress">
-              <span class="skill">Asp.net core<i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">asp.net <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill"> Angular<i class="val">80%</i></span>
+              <span class="skill"><span>c#</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div>
+            </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill">Java <i class="val">80%</i></span>
+              <span class="skill"><span>Typescript</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div>
+            </div><!-- End Skills Item -->
 
             <div class="progress">
-              <span class="skill">python<i class="val">75%</i></span>
+              <span class="skill"><span>Azure</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Sql</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>.Net Framework</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>java</span> <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
 
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Skills Section -->
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>I am a motivated and responsible undergraduate student studying Information communication technology (ICT) at 
+          the University of Sri Jayewardenepura. I'm confident that my strong and effective organizational and communication 
+          skills can be utilized for the benefit of my future employer. I'm seeking an opportunity as a trainee in a reputable 
+          company where I can further upgrade my skills which could help the development of the company.</p>
+      </div><!-- End Section Title -->
+
       <div class="container">
 
-        <div class="section-title">
-          <h2>Resume</h2>
-          <div class="center" data-aos="fade-right">
-            <img src="assets/img/Screenshot (74).png" class="img-fluid" alt="Responsive image">
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Rangana Bandara</h4>
+              <p><em>I am an enthusiastic Information and Communication Technology (ICT) undergraduate at the University of Sri Jayewardenepura, passionate about software development, cloud computing, and DevOps. I am eager to apply my skills in a dynamic environment and contribute to innovative projects.</em></p>
+              <ul>
+                <li>Rajagiriya Road Gothatuwa</li>
+                <li>0702604932</li>
+                <li>ranganadeneth6@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor(Hons) in Information Communication Technology sp in Software Technology.</h4>
+              <h5>2021 - 2025</h5>
+              <p><em>University Of Sri Jayewardenepura</em></p>
+              
+            </div><!-- Edn Resume Item -->
+
+           
+
           </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Intern Software Developer</h4>
+              <h5>2024 august - 2025 February</h5>
+              <p><em>Sri Lanka Telecom Head-Office </em></p>
+              <ul>
+                <li>Designed and developed projects using .NET Core and Angular.</li>
+                <li>Conducted knowledge transfer sessions on various technologies.</li>
+                <li>Hosted web applications on Microsoft Azure and company servers.</li>
+                <li>Configured and managed Bitbucket repositories, including CI/CD pipeline automation.
+
+                </li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+           
+
         </div>
 
-     
-    </section><!-- End Resume Section -->
+      </div>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Hi, I’m Rangana Bandara, an ICT undergraduate and software developer passionate about building scalable web applications, cloud solutions, and enterprise software. With experience in .NET Core, Angular, Azure, and DevOps, I enjoy solving complex problems and optimizing workflows.</p>
+      </div><!-- End Section Title -->
+
       <div class="container">
 
-        <div class="section-title">
-          <h2>Projects</h2>
-          <div class="text-primary">
-            <i class="bi bi-check-square-fill"></i>
-            <h4>Food ordering project</h4>
-            <p>asp.net core mvc</p>
-          </div>
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div class="text-primary">
-            <i class="bi bi-check-square-fill"></i>
-            <h4>category project</h4>
-            <p>asp.net core mvc</p>
-          </div>
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Product</li>
+            <li data-filter=".filter-branding">Branding</li>
+            <li data-filter=".filter-books">Books</li>
+          </ul><!-- End Portfolio Filters -->
 
-          <div class="text-primary">
-            <i class="bi bi-check-square-fill"></i>
-            <h4>Face detection System</h4>
-            <p>python,opencv, arduino</p>
-          </div>
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="text-primary">
-            <i class="bi bi-check-square-fill"></i>
-            <h4>Student Managment System</h4>
-            <p>c#,Mongodb</p>
-          </div>
-          <div class="text-primary">
-            <i class="bi bi-check-square-fill"></i>
-            <h4>Skills International Commercial project</h4>
-            <p>c#,Sql</p>
-          </div>
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="text-primary">
-            <i class="bi bi-check-square-fill"></i>
-            <h4>Registering project (CRUD)</h4>
-            <p>asp.net core webApi, angular</p>
-          </div>
-          
-          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
         </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    
 
       
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
-   
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
 
-   
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
+        <div class="row gy-4">
 
-        <div class="section-title">
-          <h2>Contact</h2>
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>170/A Rajagiriya road Gothatuwa</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call</h3>
+                  <p>+94 - 702604932</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>ranganadeneth6@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
         </div>
 
-        <div class="row" data-aos="fade-in">
+      </div>
 
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Gothatuwa, rajagiriya</p>
-              </div>
+    </section><!-- /Contact Section -->
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>ranganadeneth6@gmail.com</p>
-              </div>
+  </main>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>0771668503</p>
-                </div>
-                <div>
-                
-                  <h4>Github:</h4>
-                  <p>RanganaBandara</p>
-                  </div>
-                  <div>
-                
-                    <h4>Linkedin:</h4>
-                    <p>Rangana Bandara</p>
-                    </div>
-            
-  </footer><!-- End  Footer -->
+  <footer id="footer" class="footer position-relative light-background">
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+    
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
