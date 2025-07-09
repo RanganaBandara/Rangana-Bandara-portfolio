@@ -111,7 +111,7 @@
   new PureCounter();
 
   /**
-   * Animate the skills items on reveal
+   * Animate the skills items on reveal (both scroll down and up)
    */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
   skillsAnimation.forEach((item) => {
@@ -120,10 +120,39 @@
       offset: '80%',
       handler: function(direction) {
         let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
+        if (direction === 'down' || direction === 'up') {
+          progress.forEach(el => {
+            el.style.width = el.getAttribute('aria-valuenow') + '%';
+          });
+        }
+      },
+      group: 'skills'
+    });
+    new Waypoint({
+      element: item,
+      offset: '100%',
+      handler: function(direction) {
+        if (direction === 'up') {
+          let progress = item.querySelectorAll('.progress .progress-bar');
+          progress.forEach(el => {
+            el.style.width = '1px';
+          });
+        }
+      },
+      group: 'skills-reset'
+    });
+    new Waypoint({
+      element: item,
+      offset: '0%',
+      handler: function(direction) {
+        if (direction === 'down') {
+          let progress = item.querySelectorAll('.progress .progress-bar');
+          progress.forEach(el => {
+            el.style.width = '1px';
+          });
+        }
+      },
+      group: 'skills-reset'
     });
   });
 
@@ -225,5 +254,153 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Animate the about section on reveal (both scroll down and up)
+   */
+  let aboutSection = document.querySelector('.about .content');
+  if (aboutSection) {
+    new Waypoint({
+      element: aboutSection,
+      offset: '80%',
+      handler: function(direction) {
+        if (direction === 'down' || direction === 'up') {
+          aboutSection.classList.add('about-animate');
+        }
+      },
+      group: 'about'
+    });
+    new Waypoint({
+      element: aboutSection,
+      offset: '100%',
+      handler: function(direction) {
+        if (direction === 'up') {
+          aboutSection.classList.remove('about-animate');
+        }
+      },
+      group: 'about-reset'
+    });
+    new Waypoint({
+      element: aboutSection,
+      offset: '0%',
+      handler: function(direction) {
+        if (direction === 'down') {
+          aboutSection.classList.remove('about-animate');
+        }
+      },
+      group: 'about-reset'
+    });
+  }
+
+  /**
+   * Animate the resume section on reveal (both scroll down and up)
+   */
+  let resumeSection = document.querySelector('.resume .container');
+  if (resumeSection) {
+    new Waypoint({
+      element: resumeSection,
+      offset: '80%',
+      handler: function(direction) {
+        if (direction === 'down' || direction === 'up') {
+          resumeSection.classList.add('resume-animate');
+        }
+      },
+      group: 'resume'
+    });
+    new Waypoint({
+      element: resumeSection,
+      offset: '100%',
+      handler: function(direction) {
+        if (direction === 'up') {
+          resumeSection.classList.remove('resume-animate');
+        }
+      },
+      group: 'resume-reset'
+    });
+    new Waypoint({
+      element: resumeSection,
+      offset: '0%',
+      handler: function(direction) {
+        if (direction === 'down') {
+          resumeSection.classList.remove('resume-animate');
+        }
+      },
+      group: 'resume-reset'
+    });
+  }
+
+  /**
+   * Animate the portfolio section on reveal (both scroll down and up)
+   */
+  let portfolioSection = document.querySelector('.portfolio.section');
+  if (portfolioSection) {
+    new Waypoint({
+      element: portfolioSection,
+      offset: '80%',
+      handler: function(direction) {
+        if (direction === 'down' || direction === 'up') {
+          portfolioSection.classList.add('portfolio-animate');
+        }
+      },
+      group: 'portfolio'
+    });
+    new Waypoint({
+      element: portfolioSection,
+      offset: '100%',
+      handler: function(direction) {
+        if (direction === 'up') {
+          portfolioSection.classList.remove('portfolio-animate');
+        }
+      },
+      group: 'portfolio-reset'
+    });
+    new Waypoint({
+      element: portfolioSection,
+      offset: '0%',
+      handler: function(direction) {
+        if (direction === 'down') {
+          portfolioSection.classList.remove('portfolio-animate');
+        }
+      },
+      group: 'portfolio-reset'
+    });
+  }
+
+  /**
+   * Animate the contact section on reveal (both scroll down and up)
+   */
+  let contactSection = document.querySelector('.contact.section');
+  if (contactSection) {
+    new Waypoint({
+      element: contactSection,
+      offset: '80%',
+      handler: function(direction) {
+        if (direction === 'down' || direction === 'up') {
+          contactSection.classList.add('contact-animate');
+        }
+      },
+      group: 'contact'
+    });
+    new Waypoint({
+      element: contactSection,
+      offset: '100%',
+      handler: function(direction) {
+        if (direction === 'up') {
+          contactSection.classList.remove('contact-animate');
+        }
+      },
+      group: 'contact-reset'
+    });
+    new Waypoint({
+      element: contactSection,
+      offset: '0%',
+      handler: function(direction) {
+        if (direction === 'down') {
+          contactSection.classList.remove('contact-animate');
+        }
+      },
+      group: 'contact-reset'
+    });
+  }
 
 })();

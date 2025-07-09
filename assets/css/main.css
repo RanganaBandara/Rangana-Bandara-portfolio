@@ -151,7 +151,7 @@ h6 {
   bottom: 0;
   padding: 0 15px;
   width: 300px;
-  transition: all ease-in-out 0.3s;
+  transition: left 0.4s cubic-bezier(0.4,0,0.2,1), background 0.4s, box-shadow 0.4s, border-radius 0.4s, padding 0.4s, width 0.4s;
   overflow-y: auto;
   z-index: 997;
   border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -159,6 +159,7 @@ h6 {
   border-bottom-right-radius: 24px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  box-shadow: 0 0 24px 0 rgba(0,0,0,0.12);
 }
 
 .header .profile-img img {
@@ -670,9 +671,17 @@ section,
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   padding: 32px 24px;
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s, background 0.3s;
   animation: blinkIn 1s linear;
   animation-fill-mode: both;
+  opacity: 0.2;
+  transform: translateY(40px);
+}
+
+.about .content.about-animate {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 
 @keyframes blinkIn {
@@ -721,7 +730,7 @@ section,
 # Skills Section
 --------------------------------------------------------------*/
 .skills {
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 
 .skills .progress {
@@ -732,7 +741,7 @@ section,
 }
 
 .skills .progress .skill, .skills .progress .skill .val {
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 
 .skills .progress .skill {
@@ -762,12 +771,71 @@ section,
 }
 
 .skills .section-title h2 {
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
+.resume .resume-title, .resume .resume-item {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.resume .container.resume-animate .resume-title,
+.resume .container.resume-animate .resume-item {
+  animation: resume-bounce-in 0.9s cubic-bezier(0.68,-0.55,0.27,1.55);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+@keyframes resume-bounce-in {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-16px) scale(1.03);
+  }
+  80% {
+    transform: translateY(8px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.resume .container {
+  position: relative;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  margin-left: 16px;
+  overflow: hidden;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  animation: none;
+}
+
+.resume .container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  border-radius: inherit;
+  z-index: 1;
+  opacity: 0.1;
+  transform: perspective(800px) rotateY(60deg) scale(0.8);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+}
+
+.resume .container.resume-animate::before {
+  opacity: 1;
+  transform: perspective(800px) rotateY(0deg) scale(1);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+}
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -825,10 +893,38 @@ section,
 }
 
 .resume .container {
+  position: relative;
   border-top-left-radius: 32px;
   border-bottom-left-radius: 32px;
   margin-left: 16px;
   overflow: hidden;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  animation: none;
+}
+
+.resume .container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  border-radius: inherit;
+  z-index: 1;
+  opacity: 0.1;
+  transform: perspective(800px) rotateY(60deg) scale(0.8);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+}
+
+.resume .container.resume-animate::before {
+  opacity: 1;
+  transform: perspective(800px) rotateY(0deg) scale(1);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+}
+
+.resume .container.resume-animate {
+  animation: resume-bounce-in 0.9s cubic-bezier(0.68,-0.55,0.27,1.55);
 }
 
 /*--------------------------------------------------------------
@@ -841,6 +937,7 @@ section,
   text-align: center;
 }
 
+
 .portfolio .portfolio-filters li {
   display: inline-block !important;
   color: #000 !important;
@@ -852,6 +949,34 @@ section,
   cursor: pointer !important;
   border: 1px solid #ddd !important;
   transition: background 0.2s, color 0.2s;
+}
+.portfolio.section{
+  background-color:#0E2624;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.portfolio.section.portfolio-animate {
+  animation: portfolio-fade-slide-in 1s cubic-bezier(0.68,-0.55,0.27,1.55);
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes portfolio-fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .portfolio .portfolio-filters li.filter-active,
@@ -1347,7 +1472,7 @@ section,
   border-radius: 12px;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
-  transition: all 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.68,-0.55,0.27,1.55), box-shadow 0.3s;
 }
 
 .download-btn i {
@@ -1356,9 +1481,8 @@ section,
 }
 
 .download-btn:hover {
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+  transform: scale(1.12) rotate(-3deg);
+  box-shadow: 0 8px 32px rgba(20,157,221,0.25);
 }
 
 .resume-download-section .download-btn {
@@ -1375,16 +1499,13 @@ section,
   /* Add your styles here */
 }
 
-.portfolio .section-title h2 {
-  color: #000000 !important;
-}
-
+.portfolio .section-title h2,
 .portfolio .section-title p {
-  color: #000000 !important;
+  color: #fff !important;
 }
 
 .portfolio .section-title > p {
-  color: #000000 !important;
+  color: #fff !important;
 }
 
 /* Smooth transitions for links and buttons */
@@ -1414,3 +1535,83 @@ a, button, .download-btn {
   animation-fill-mode: both;
   animation-delay: 0.5s;
 }
+
+.skills.section{
+  background-color:#0E2624;
+}
+
+.resume .resume-title {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.resume .container.resume-animate .resume-title {
+  animation: resume-title-bounce-in 1s cubic-bezier(0.68,-0.55,0.27,1.55);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+@keyframes resume-title-bounce-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) scale(1.05);
+  }
+  80% {
+    transform: translateY(-4px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.contact.section {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.contact.section.contact-animate {
+  animation: contact-fade-slide-in 1s cubic-bezier(0.68,-0.55,0.27,1.55);
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes contact-fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+  80% {
+    transform: translateY(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact .form-control, .contact textarea {
+  background: #fff !important;
+  color: #222 !important;
+  border: 1px solid #ccc;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s, transform 0.4s, background 0.2s, color 0.2s;
+}
+.contact.section.contact-animate .form-control,
+.contact.section.contact-animate textarea {
+  opacity: 1;
+  transform: scale(1);
+  background: #fff !important;
+  color: #222 !important;
+}
+.contact.section.contact-animate .form-control:nth-child(1) { transition-delay: 0.35s; }
+.contact.section.contact-animate .form-control:nth-child(2) { transition-delay: 0.45s; }
+.contact.section.contact-animate .form-control:nth-child(3) { transition-delay: 0.55s; }
+.contact.section.contact-animate textarea { transition-delay: 0.65s; }
+
