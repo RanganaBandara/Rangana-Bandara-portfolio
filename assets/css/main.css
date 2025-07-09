@@ -19,11 +19,11 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
+  --background-color: #000000; /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #151f2b; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -144,7 +144,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, #181c22 60%, #23272f 100%) !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -155,6 +155,10 @@ h6 {
   overflow-y: auto;
   z-index: 997;
   border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .header .profile-img img {
@@ -256,6 +260,9 @@ h6 {
 .navmenu {
   padding: 0;
   z-index: 9997;
+  border-radius: 24px;
+  overflow: hidden;
+  background: transparent !important;
 }
 
 .navmenu ul {
@@ -371,6 +378,8 @@ h6 {
   padding: 40px 0;
   position: relative;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .footer .copyright p {
@@ -506,6 +515,8 @@ section,
   background-color: var(--background-color);
   padding: 60px 0;
   overflow: clip;
+  border-radius: 24px;
+  margin-bottom: 32px;
 }
 
 /*--------------------------------------------------------------
@@ -522,17 +533,22 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .section-title h2:after {
   content: "";
   position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-color);
   left: 0;
   bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--accent-color);
+  transition: width 0.5s;
+}
+
+.section-title h2:hover:after {
+  width: 50px;
 }
 
 .section-title p {
@@ -648,6 +664,26 @@ section,
   line-height: 0;
 }
 
+/* About section card hover effect */
+.about .content {
+  background: #000000;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 24px;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  animation: blinkIn 1s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes blinkIn {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  40% { opacity: 0; }
+  60% { opacity: 1; }
+  80% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -684,6 +720,10 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
+.skills {
+  color: #000000 !important;
+}
+
 .skills .progress {
   height: 60px;
   display: block;
@@ -691,8 +731,11 @@ section,
   border-radius: 0;
 }
 
+.skills .progress .skill, .skills .progress .skill .val {
+  color: #000000 !important;
+}
+
 .skills .progress .skill {
-  color: var(--heading-color);
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
@@ -716,6 +759,10 @@ section,
   height: 10px;
   transition: 0.9s;
   background-color: var(--accent-color);
+}
+
+.skills .section-title h2 {
+  color: #000000 !important;
 }
 
 /*--------------------------------------------------------------
@@ -777,6 +824,13 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.resume .container {
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  margin-left: 16px;
+  overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -788,21 +842,23 @@ section,
 }
 
 .portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0 10px;
-  line-height: 1;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  transition: all 0.3s ease-in-out;
+  display: inline-block !important;
+  color: #000 !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  margin: 0 8px !important;
+  padding: 8px 20px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border: 1px solid #ddd !important;
+  transition: background 0.2s, color 0.2s;
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+.portfolio .portfolio-filters li.filter-active,
+.portfolio .portfolio-filters li:hover {
+  background: #149ddd !important;
+  color: #fff !important;
+  border-color: #149ddd !important;
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -823,6 +879,12 @@ section,
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio .portfolio-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 
 .portfolio .portfolio-content img {
@@ -835,7 +897,7 @@ section,
   inset: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   padding: 15px;
 }
 
@@ -843,7 +905,7 @@ section,
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
-  color: #ffffff;
+  color: #000000;
   display: inline-block;
   background-color: var(--accent-color);
 }
@@ -866,7 +928,7 @@ section,
   left: calc(50% - 40px);
   font-size: 26px;
   top: calc(50% - 14px);
-  color: #fff;
+  color: #000000;
   transition: 0.3s;
   line-height: 1.2;
 }
@@ -1266,6 +1328,7 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
 .resume-download-section {
   display: flex;
   justify-content: center;
@@ -1298,10 +1361,56 @@ section,
   box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
 }
 
+.resume-download-section .download-btn {
+  font-family: 'Montserrat', 'Raleway', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
 
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.portfolio .section-title h2 {
+  color: #000000 !important;
+}
+
+.portfolio .section-title p {
+  color: #000000 !important;
+}
+
+.portfolio .section-title > p {
+  color: #000000 !important;
+}
+
+/* Smooth transitions for links and buttons */
+a, button, .download-btn {
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume .section-title p {
+  animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+.about .section-title p {
+  animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
 }
