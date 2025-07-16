@@ -21,8 +21,11 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">  
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -38,52 +41,44 @@
 
 <body class="index-page">
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+  <!-- Navigation Container -->
+  <div class="nav-container">
+    <div class="nav-wrapper">
+      <!-- Top Navigation Bar -->
+      <nav id="navmenu" class="top-navbar centered-navbar">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-scroll-line"></div>
+      </nav>
     </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Rangana Bandara</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://www.facebook.com/deneth.rangana.3" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://github.com/RanganaBandara" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://lk.linkedin.com/in/rangana-bandara-a53787164" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#skills"><i class="bi bi-bar-chart navicon"></i> Skills</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        
-      
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
+  </div>
 
   <main class="main">
+    <div class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-
+    <section
+      id="hero"
+      class="hero section dark-background hero-black-bg"
+    >
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Rangana Bandara</h2>
-        <p>I'm a <span class="typed" data-typed-items="Designer, Developer, Freelancer,Software Engineer">Web developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <h2>RANGANA BANDARA</h2>
+        <img src="assets/img/pp/newpic.jpg">
+        <div class="hero-social-links">
+          <a href="https://www.facebook.com/share/1Fwbp7iqEe/" class="hero-social facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/RanganaBandara" class="hero-social github" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rangana-bandara-a53787164?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hero-social linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/denethrangana05?igsh=MTdjajhkNXZyOHJtYw==" class="hero-social instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        </div> 
+        
+        <p class="hero-animated-p">I'm a <span class="typed" data-typed-items="Designer, Developer, Freelancer,Software Engineer">Web developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
-
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
@@ -91,52 +86,49 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Hi there! I'm Rangana Bandara, a passionate software engineering intern eager to learn and contribute to a team environment. I'm particularly interested in fullstack web development and have experience with programming languages like c#.Java,Typescript,JavaScript and python.  I'm always looking for new challenges and opportunities to expand my skillset.</p>
+        <h2 class="about-animated-h2">About</h2>
+        <p class="about-desc">Hi there! I'm Rangana Bandara, a passionate software engineer who likes to learn and contribute to a team environment.</p>
+        <p class="about-desc">I'm always looking for new challenges and opportunities to expand my skillset.</p>
+        <p class="about-desc">I enjoy working with modern technologies and collaborating with others to build great things.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2> Web Developer</h2>
-           
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>30 January 2001</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+94702604932</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Rajagiriya</span></li>
-                </ul>
+      <div class="container" data-aos="fade-up" data-aos-delay="50">
+        <div class="about-details-box">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-8 content">
+              <h2> Web Developer</h2>
+             
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>30 January 2001</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+94702604932</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Rajagiriya</span></li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bict</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>ranganadeneth6@gmail.com</span></li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bict</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>ranganadeneth6@gmail.com</span></li>
-                </ul>
-              </div>
+              <p class="py-3">
+                I am a final-year undergraduate who has completed my exams and is currently awaiting the opportunity to begin my research. During my studies, I have gained hands-on experience in various technologies and am eager to apply my knowledge to real-world projects.   </p>
             </div>
-            <p class="py-3">
-              I am a final-year undergraduate who has completed my exams and is currently awaiting the opportunity to begin my research. During my studies, I have gained hands-on experience in various technologies and am eager to apply my knowledge to real-world projects.   </p>
           </div>
         </div>
-
       </div>
 
     </section><!-- /About Section -->
-
-    
 
     <!-- Skills Section -->
     <section id="skills" class="skills section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
+        <h2 class="skills-animated-h2">Skills</h2>
         
       </div><!-- End Section Title -->
 
@@ -205,7 +197,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
+        <h2 class="resume-animated-h2">Resume</h2>
         <p>I am a motivated and responsible undergraduate student studying Information communication technology (ICT) at 
           the University of Sri Jayewardenepura. I'm confident that my strong and effective organizational and communication 
           skills can be utilized for the benefit of my future employer. I'm seeking an opportunity as a trainee in a reputable 
@@ -277,7 +269,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2 class="portfolio-animated-h2">Portfolio</h2>
         <p>Hi, I'm Rangana Bandara, an ICT undergraduate and software developer passionate about building scalable web applications, cloud solutions, and enterprise software. With experience in .NET Core, Angular, Azure, and DevOps, I enjoy solving complex problems and optimizing workflows.</p>
       </div><!-- End Section Title -->
 
@@ -454,7 +446,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2 class="contact-animated-h2">Contact</h2>
         
       </div><!-- End Section Title -->
 
@@ -490,6 +482,14 @@
               </div><!-- End Info Item -->
 
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7921.405065921335!2d79.90825594403069!3d6.926116622867022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259de95904c49%3A0x3e68fbfda8f95554!2sGothatuwa%20New%20Town!5e0!3m2!1sen!2slk!4v1747148146421!5m2!1sen!2slk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+              <!-- Contact Social Links -->
+              <div class="contact-social-links">
+                <a href="https://www.facebook.com/share/1Fwbp7iqEe/" class="contact-social facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://github.com/RanganaBandara" class="contact-social github" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rangana-bandara-a53787164?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="contact-social linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/denethrangana05?igsh=MTdjajhkNXZyOHJtYw==" class="contact-social instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+              </div>
             </div>
           </div>
           
@@ -526,7 +526,7 @@
           ❌ Something went wrong. Please try again later.
         </div>
 
-        <button type="submit">Send Message</button>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
       </div>
 
     </div>
@@ -567,31 +567,93 @@
   });
 </script>
 
-
-
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
+  <script>
+    // Show thin white line on navbar when scrolling
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.centered-navbar');
+      if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <!-- New Bottom Section -->
+<section id="bottom-section" class="bottom-section">
+  <div class="container">
+    <!-- Content can be added here later -->
+  </div>
+</section>
 
+<!-- Final Section with Orange Top Line -->
+<section id="final-section" class="final-section">
+  <div class="container">
+    <!-- Quick Links Section -->
+    <div class="quick-links-container">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="quick-link-box">
+            <div class="quick-link-icon">
+              <i class="bi bi-file-earmark-text"></i>
+            </div>
+            <h3>Resume</h3>
+            <p>Download my latest resume</p>
+            <a href="#resume" class="quick-link-btn">View Resume</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="quick-link-box">
+            <div class="quick-link-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <h3>Portfolio</h3>
+            <p>Check out my projects</p>
+            <a href="#portfolio" class="quick-link-btn">View Projects</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="quick-link-box">
+            <div class="quick-link-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <h3>Contact</h3>
+            <p>Get in touch with me</p>
+            <a href="#contact" class="quick-link-btn">Contact Me</a>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="quick-link-box">
+            <div class="quick-link-icon">
+              <i class="bi bi-linkedin"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Connect on LinkedIn</p>
+            <a href="https://lk.linkedin.com/in/rangana-bandara-a53787164" class="quick-link-btn" target="_blank" rel="noopener">Connect</a>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    
-
-  </footer>
-
-  <!--fontawesome
-  -->
-  
-           <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
+    <!-- Copyright and Developer Credit -->
+    <div class="copyright-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="copyright-text">
+              © 2024 All Rights Reserved | Developed by <span class="developer-name">Bandara W.G.T.H.M.D.R</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -613,6 +675,100 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  // Animate hero section p color
+  const heroP = document.querySelector('.hero-animated-p');
+  const colors = ['#f1630e', '#f4920b', '#fdcb02', '#fbde04', ' #feef01']; // orange, red, blue, green, pink
+  let colorIndex = 0;
+  if (heroP) {
+    setInterval(() => {
+      colorIndex = (colorIndex + 1) % colors.length;
+      heroP.style.color = colors[colorIndex];
+    }, 700);
+    // Set initial color
+    heroP.style.color = colors[0];
+  }
+</script>
+
+<script>
+  // Animate About section h2 color
+  const aboutH2 = document.querySelector('.about-animated-h2');
+  const aboutColors = ['#f1630e', '#f4920b', '#fdcb02', '#fbde04', '#feef01'];
+  let aboutColorIndex = 0;
+  if (aboutH2) {
+    setInterval(() => {
+      aboutColorIndex = (aboutColorIndex + 1) % aboutColors.length;
+      aboutH2.style.color = aboutColors[aboutColorIndex];
+    }, 900);
+    // Set initial color
+    aboutH2.style.color = aboutColors[0];
+  }
+</script>
+
+<script>
+  // Animate Skills section h2 color
+  const skillsH2 = document.querySelector('.skills-animated-h2');
+  const skillsColors = ['#f1630e', '#f4920b', '#fdcb02', '#fbde04', '#feef01'];
+  let skillsColorIndex = 0; 
+  if (skillsH2) {
+    setInterval(() => {
+      skillsColorIndex = (skillsColorIndex + 1) % skillsColors.length;
+      skillsH2.style.color = skillsColors[skillsColorIndex];
+    }, 900);
+    // Set initial color
+    skillsH2.style.color = skillsColors[0];
+  }
+</script>
+
+<script>
+  // Animate Resume section h2 color
+  const resumeH2 = document.querySelector('.resume-animated-h2');
+  const resumeColors = ['#f1630e', '#f4920b', '#fdcb02', '#fbde04', '#feef01'];
+  let resumeColorIndex = 0;
+  if (resumeH2) {
+    setInterval(() => {
+      resumeColorIndex = (resumeColorIndex + 1) % resumeColors.length;
+      resumeH2.style.color = resumeColors[resumeColorIndex];
+    }, 900);
+    // Set initial color
+    resumeH2.style.color = resumeColors[0];
+  }
+</script>
+
+<script>
+  // Animate Portfolio section h2 color
+  document.addEventListener('DOMContentLoaded', function() {
+    const portfolioH2 = document.querySelector('.portfolio-animated-h2');
+    console.log('Portfolio H2 found:', portfolioH2); // Debug log
+    const portfolioColors = ['#f1630e', '#f4920b', '#fdcb02', '#fbde04', '#feef01'];
+    let portfolioColorIndex = 0;
+    if (portfolioH2) {
+      setInterval(() => {
+        portfolioColorIndex = (portfolioColorIndex + 1) % portfolioColors.length;
+        portfolioH2.style.setProperty('color', portfolioColors[portfolioColorIndex], 'important');
+        console.log('Portfolio color changed to:', portfolioColors[portfolioColorIndex]); // Debug log
+      }, 900);
+      // Set initial color
+      portfolioH2.style.setProperty('color', portfolioColors[0], 'important');
+    }
+  });
+</script>
+
+<script>
+  // Animate Contact section h2 color
+  const contactH2 = document.querySelector('.contact-animated-h2');
+  const contactColors = ['#f1630e', '#f4920b', '#fdcb02', '#fbde04', '#feef01'];
+  let contactColorIndex = 0;
+  if (contactH2) {
+    setInterval(() => {
+      contactColorIndex = (contactColorIndex + 1) % contactColors.length;
+      contactH2.style.setProperty('color', contactColors[contactColorIndex], 'important');
+    }, 900);
+    // Set initial color
+    contactH2.style.setProperty('color', contactColors[0], 'important');
+  }
+</script>
 
 </body>
 
