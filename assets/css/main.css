@@ -1753,17 +1753,24 @@ a, button, .download-btn {
 }
 
 .hero-black-bg .container {
-  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 40px 24px 24px 24px;
+  margin: 60px auto 0 auto;
+  text-align: left;
 }
 
-@media (max-width: 600px) {
-  .hero-black-bg {
-    height: 320px;
-    min-height: 220px;
-  }
+.hero-black-bg .hero-text {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 #hero img {
+  flex: 0 0 auto;
   max-width: 450px;
   width: 100%;
   height: auto;
@@ -1772,6 +1779,10 @@ a, button, .download-btn {
   margin-left: 730px;
   margin-right: auto;
   align-self: flex-start;
+  box-shadow:
+    -8px 0 24px 0 rgba(241, 99, 14, 0.25),
+    0 -8px 24px 0 rgba(241, 99, 14, 0.25);
+  border-radius: 12px;
 }
 
 @media (max-width: 1200px) {
@@ -1792,10 +1803,60 @@ a, button, .download-btn {
   }
 }
 @media (max-width: 600px) {
+  .hero-black-bg .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   #hero img {
-    margin-left: 0;
-    max-width: 180px;
-    margin-top: 0;
+    margin: 16px 0 0 0 !important;
+    max-width: 120px;
+  }
+}
+
+.hero-black-bg h2 {
+  font-size: 3rem;
+  color: #f1630e;
+  font-weight: bold;
+  margin-bottom: 18px;
+  word-break: break-word;
+}
+
+.hero-black-bg p,
+.hero-black-bg .hero-animated-p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .hero-black-bg .container {
+    max-width: 100%;
+    padding: 32px 12px 12px 12px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .hero-black-bg h2 {
+    font-size: 2.2rem;
+  }
+  .hero-black-bg p,
+  .hero-black-bg .hero-animated-p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-black-bg .container {
+    padding: 18px 4px 4px 4px;
+    margin-top: 10px;
+  }
+  .hero-black-bg h2 {
+    font-size: 1.3rem;
+  }
+  .hero-black-bg p,
+  .hero-black-bg .hero-animated-p {
+    font-size: 0.95rem;
   }
 }
 
@@ -1914,7 +1975,7 @@ a, button, .download-btn {
 }
 
 .resume .section-title h2,
-.resume-animated-h2 {
+.resume-animated-h2 { 
   text-align: center !important;
   display: block;
   width: 100%;
@@ -2122,4 +2183,14 @@ iframe {
     margin-top: 40px;
     padding: 20px 0;
   }
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #f1630e;
+  margin-right: 24px;
+  margin-left: 8px;
 }
