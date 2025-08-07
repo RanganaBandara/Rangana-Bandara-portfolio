@@ -68,7 +68,8 @@
       class="hero section dark-background hero-black-bg"
     >
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>RANGANA BANDARA</h2>
+        <h2 class="hero-name" id="hero-name">RANGANA</h2>
+        
         <p class="hero-animated-p">I'm a <span class="typed" data-typed-items="Designer, Developer, Freelancer,Software Engineer">Web developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
         <img src="assets/img/pp/newpic.jpg">
         <div class="hero-social-links">
@@ -250,7 +251,7 @@
             </div><!-- Edn Resume Item -->
 
             <div class="resume-download-section">
-          <a href="assets/Cv/CV-W.G.T.H.M.D.Rangana_Bandara.pdf" download="CV-W.G.T.H.M.D.Rangana_Bandara.pdf" class="download-btn">
+          <a href="assets/Cv/CV-SE- W.G.T.H.M.D.Rangana_Bandara.pdf" download="CV-SE- W.G.T.H.M.D.Rangana_Bandara.pdf" class="download-btn">
            <i class="fas fa-download"></i> Download Resume
                    </a>
                     </div>
@@ -754,7 +755,7 @@
   });
 </script>
 
-<script>
+  <script>
   // Animate Contact section h2 color
   const contactH2 = document.querySelector('.contact-animated-h2');
   const contactColors = ['#f1630e', '#f4920b', '#fdcb02', '#fbde04', '#feef01'];
@@ -767,6 +768,24 @@
     // Set initial color
     contactH2.style.setProperty('color', contactColors[0], 'important');
   }
+
+  // Handle responsive name display
+  function updateHeroName() {
+    const heroName = document.getElementById('hero-name');
+    if (heroName) {
+      if (window.innerWidth <= 480) {
+        heroName.textContent = 'RANGANA';
+      } else {
+        heroName.textContent = 'RANGANA BANDARA';
+      }
+    }
+  }
+
+  // Run on page load
+  updateHeroName();
+
+  // Run on window resize
+  window.addEventListener('resize', updateHeroName);
 </script>
 
 </body>
