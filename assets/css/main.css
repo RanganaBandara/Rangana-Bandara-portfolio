@@ -1756,12 +1756,13 @@ a, button, .download-btn {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
-  max-width: 600px;
+  justify-content: flex-start;
+  max-width: 1200px;
   width: 100%;
   padding: 40px 24px 24px 24px;
   margin: 60px auto 0 auto;
   text-align: left;
+  position: relative;
 }
 
 .hero-black-bg .hero-text {
@@ -1771,7 +1772,7 @@ a, button, .download-btn {
 
 #hero img {
   flex: 0 0 auto;
-  max-width: 450px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   display: block;
@@ -1783,22 +1784,41 @@ a, button, .download-btn {
     -8px 0 24px 0 rgba(241, 99, 14, 0.25),
     0 -8px 24px 0 rgba(241, 99, 14, 0.25);
   border-radius: 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 @media (max-width: 1200px) {
   #hero img {
     margin-left: 400px;
-    max-width: 350px;
+    max-width: 250px;
+  }
+  .hero-black-bg h2,
+  .hero-black-bg p,
+  .hero-black-bg .hero-animated-p {
+    max-width: 50%;
   }
 }
 @media (max-width: 900px) {
+  .hero-black-bg .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
   #hero img {
     margin-left: 0;
-    max-width: 180px;
+    max-width: 150px;
+    margin: 0 auto;
+    position: static;
+  }
+  .hero-black-bg h2,
+  .hero-black-bg p,
+  .hero-black-bg .hero-animated-p {
+    max-width: 100%;
   }
   .hero-social-links {
-    margin-left: 0;
-    margin-top: 16px;
+    margin: 16px auto 0 auto;
     justify-content: center;
   }
 }
@@ -1807,10 +1827,11 @@ a, button, .download-btn {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 15px;
   }
   #hero img {
-    margin: 16px 0 0 0 !important;
-    max-width: 120px;
+    max-width: 100px;
+    margin: 0 auto;
   }
 }
 
@@ -1820,6 +1841,10 @@ a, button, .download-btn {
   font-weight: bold;
   margin-bottom: 18px;
   word-break: break-word;
+  text-align: left;
+  max-width: 60%;
+  z-index: 10;
+  position: relative;
 }
 
 .hero-black-bg p,
@@ -1828,6 +1853,26 @@ a, button, .download-btn {
   line-height: 1.5;
   margin-bottom: 0;
   word-break: break-word;
+  text-align: left;
+  max-width: 60%;
+  z-index: 10;
+  position: relative;
+}
+
+.hero-black-bg .typed,
+.hero-black-bg .typed-cursor {
+  font-size: inherit;
+  color: inherit;
+}
+
+@media (max-width: 1200px) {
+  .hero-black-bg h2 {
+    font-size: 2.5rem;
+  }
+  .hero-black-bg p,
+  .hero-black-bg .hero-animated-p {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1846,6 +1891,16 @@ a, button, .download-btn {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-black-bg h2 {
+    font-size: 1.8rem;
+  }
+  .hero-black-bg p,
+  .hero-black-bg .hero-animated-p {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-black-bg .container {
     padding: 18px 4px 4px 4px;
@@ -1857,6 +1912,16 @@ a, button, .download-btn {
   .hero-black-bg p,
   .hero-black-bg .hero-animated-p {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-black-bg h2 {
+    font-size: 1.1rem;
+  }
+  .hero-black-bg p,
+  .hero-black-bg .hero-animated-p {
+    font-size: 0.85rem;
   }
 }
 
